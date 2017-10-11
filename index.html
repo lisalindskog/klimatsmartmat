@@ -6,13 +6,27 @@
     <link href="./main.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <h1>Hej! Jag vill ha klimatsmart mat</h1>
+    <h1>Hej! Jag vill ha tips om mer klimatsmart mat</h1>
     <div class="inputSection">
       <div class="inputs">
-        <input autofocus=autofocus placeholder="Say what?!"></input>
+        <input autofocus=autofocus placeholder="Den här maten älskar jag"></input>
       </div>
-      <button class="addOption">Och..</button>
+      <button class="addOption">Lägg till en maträtt</button>
     </div>
+    <div class="resultSection"></div>
     <a href="https://www.vecka.nu"><button>Tipsa mig!</button></a>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+    $(function() {
+      $('.resultSection').hide()
+
+      var add_option = function () {
+        $('.inputs').append('<input></input>')
+      }
+
+      $('.addOption').click(add_option)
+    })
+    </script>
   </body>
 </html>
